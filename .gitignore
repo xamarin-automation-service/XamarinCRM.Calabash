@@ -1,0 +1,10 @@
+**/.idea
+**/test_servers/**
+**/.irb-history
+**/Gemfile.lock
+**/.DS_Store
+**/*.swp
+screenshot*.png
+*.apk
+*.app
+*.ipa
