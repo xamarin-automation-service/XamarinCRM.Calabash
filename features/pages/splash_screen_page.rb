@@ -1,7 +1,7 @@
 class SplashScreenPage < Calabash::Page
   def trait
     if android?
-      @sign_in_button = "*"
+      @sign_in_button = "* marked:'SIGN IN'"
     elsif ios?
       @sign_in_button = "* marked:'SIGN IN'"
     end
@@ -23,5 +23,10 @@ class SplashScreenPage < Calabash::Page
   end
 end
 
-class IOS::SplashScreenPage < SplashScreenPage; end
-class Android::SplashScreenPage < SplashScreenPage; end
+
+class Android::SplashScreenPage < SplashScreenPage
+  include Calabash::Android
+end
+class IOS::SplashScreenPage < SplashScreenPage
+  include Calabash::IOS
+end
