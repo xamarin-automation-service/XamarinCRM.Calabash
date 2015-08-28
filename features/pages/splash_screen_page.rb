@@ -1,9 +1,9 @@
 class SplashScreenPage < Calabash::Page
   def trait
     if android?
-      @sign_in_button = "* marked:'SIGN IN'"
+      @sign_in_button = {marked:'SIGN IN'}
     elsif ios?
-      @sign_in_button = "* marked:'SIGN IN'"
+      @sign_in_button = {marked:'SIGN IN'}
     end
 
     sleep 10
