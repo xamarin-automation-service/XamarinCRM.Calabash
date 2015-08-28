@@ -4,19 +4,14 @@ platform = ENV['PLATFORM']
 
 require 'calabash/ios'
 require 'calabash/android'
+require_relative '../../features/support/Helpers'
 
 case platform
   when 'android'
-    # require 'calabash/android'
-    # require 'calabash/ios'
-
     World(Calabash::Android)
 
     Calabash::Android.setup_defaults!
   when 'ios'
-    # require 'calabash/ios'
-    # require 'calabash/android'
-
     World(Calabash::IOS)
 
     Calabash::IOS.setup_defaults!
