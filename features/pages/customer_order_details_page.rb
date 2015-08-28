@@ -18,6 +18,33 @@ class CustomerOrderDetailsPage < Calabash::Page
 
     return @trait
   end
+
+  def change_product
+    touch @product_field
+  end
+
+  def change_price amount
+    touch @price_field
+    clear_text
+    enter_text "$ #{amount}"
+  end
+
+  def change_date
+    #TODO: Need to add logic
+  end
+
+  def save_and_exit
+    touch @save_button
+    screenshot 'Dialog Appears'
+    touch @save_button
+  end
+
+  def deliver_order
+    touch @deliver_order_button
+    screenshot 'Dialog Appears'
+    touch @confirm_delivery_button
+  end
+
 end
 
 class Android::CustomerOrderDetailsPage < CustomerOrderDetailsPage
