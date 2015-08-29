@@ -20,6 +20,7 @@ class CustomerContactPage < Calabash::Page
     wait_for_view({marked:'Contact'})
     wait_for_view({marked:'Phone'})
     wait_for_view({marked:'Address'})
+    return self
   end
 
   def navigate_to_customer_orders
