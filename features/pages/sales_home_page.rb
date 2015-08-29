@@ -1,9 +1,9 @@
 class SalesHomePage < Calabash::Page
   def trait
     if android?
-      @trait = "* marked:'WEEKLY AVERAGE'"
+      @trait = {marked:'WEEKLY AVERAGE'}
     elsif ios?
-      @trait = "* marked:'WEEKLY AVERAGE'"
+      @trait = {marked:'WEEKLY AVERAGE'}
     end
 
     @trait
