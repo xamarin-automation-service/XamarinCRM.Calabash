@@ -4,7 +4,7 @@ platform = ENV['PLATFORM']
 
 require 'calabash/ios'
 require 'calabash/android'
-require_relative '../../features/support/Helpers'
+require_relative 'Helpers'
 
 case platform
   when 'android'

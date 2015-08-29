@@ -21,16 +21,19 @@ class CustomerOrderDetailsPage < Calabash::Page
 
   def change_product
     touch @product_field
+    return self
   end
 
   def change_price amount
     touch @price_field
     clear_text
     enter_text "$ #{amount}"
+    return self
   end
 
   def change_date
     #TODO: Need to add logic
+    return self
   end
 
   def save_and_exit

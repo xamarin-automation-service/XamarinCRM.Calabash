@@ -12,3 +12,10 @@ class PartsPage < Calabash::Page
     tap partname
   end
 end
+
+class Android::PartsPage < PartsPage
+  include Calabash::Android
+end
+class IOS::PartsPage < PartsPage
+  include Calabash::IOS
+end
