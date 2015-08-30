@@ -4,7 +4,7 @@ class ProductDetailsPage < Calabash::Page
 
     if android?
       @trait = {marked: "action_bar_container"}
-    elsif
+    elsif ios?
       @trait = {marked: "Back"}
     end
     return @trait
