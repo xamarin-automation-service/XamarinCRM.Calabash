@@ -15,7 +15,7 @@ class GlobalPage < Calabash::Page
   end
 
   def go_back
-    sleep 2
+    sleep 4
 
     if android?
       press_back_button

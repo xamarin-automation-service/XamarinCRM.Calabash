@@ -10,11 +10,14 @@ class ABSFilamentPage < Calabash::Page
   end
 
   def select_color(color)
-    color_chosen = "Fil-ABS-#{color}"
-    if query(color_chosen).nil?
-      scroll('*', :down)
-    end
-    tap color_chosen
+    # if query(color_chosen).nil?
+    #   scroll('*', :down)
+    # end
+    colorchosen = "FIL-ABS-#{color}"
+    sleep 5
+    #TODO: make these helper methods work
+    # scroll_to("*", :down, colorchosen)
+    tap "* {text CONTAINS '#{colorchosen}'}"
   end
 end
 

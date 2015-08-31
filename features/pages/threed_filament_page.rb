@@ -1,15 +1,15 @@
 class ThreeDFilamentPage < Calabash::Page
   def trait
     if android?
-    @trait = {marked: "PLA Filament"}
+      @trait = {marked: "PLA Filament"}
     elsif ios?
-      @trait = {marked: "3D Filament"}
+      @trait = {id: "3D Filament"}
     end
     return @trait
   end
 
   def select_part(partname)
-    tap partname
+    tap "* {text CONTAINS '#{partname}'}"
   end
 end
 

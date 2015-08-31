@@ -1,15 +1,11 @@
 class ProductsPage < Calabash::Page
   def trait
-    if android?
-      @trait = {marked: "Products"}
-    elsif ios?
-      @trait = {marked: "Products"}
-    end
-    return @trait
+    @trait = {marked: "Products"}
   end
 
   def select_product(productname)
-    tap productname
+    sleep 4
+    tap "* {text CONTAINS '#{productname}'}"
   end
 end
 

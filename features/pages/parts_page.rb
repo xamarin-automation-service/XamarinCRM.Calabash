@@ -9,7 +9,7 @@ class PartsPage < Calabash::Page
   end
 
   def select_part(partname)
-    tap partname
+    tap "* {label CONTAINS '#{partname}'}"
   end
 end
 

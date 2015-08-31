@@ -11,8 +11,10 @@ class PLAFilamentPage < Calabash::Page
 
   def select_color(color)
     colorchosen = "FIL-PLA-#{color}"
-    scroll_to("*", :down, colorchosen)
-    tap colorchosen
+    sleep 5
+    #TODO: make these helper methods work
+    # scroll_to("*", :down, colorchosen)
+    tap "* {text CONTAINS '#{colorchosen}'}"
   end
 end
 
