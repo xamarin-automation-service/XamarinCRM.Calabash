@@ -1,5 +1,7 @@
 class CustomerContactPage < Calabash::Page
   def trait
+    sleep 2
+
     @trait = {marked:'Address'}
     @customer_orders = {marked:'Orders'}
     @customer_sales = {marked:'Sales'}
@@ -24,24 +26,25 @@ class CustomerContactPage < Calabash::Page
   end
 
   def navigate_to_customer_orders
-    touch @customer_orders
+    tap @customer_orders
   end
 
   def navigate_to_customer_sales
-    touch @customer_sales
+    tap @customer_sales
   end
 
   def check_phone
-    touch @phone_button
+    tap @phone_button
     screenshot 'Open phone'
-    touch @dial_cancel_button
+    tap @dial_cancel_button
     screenshot 'Cancel call'
-    touch @phone_button
+    tap @phone_button
     screenshot 'Open phone again'
   end
 
   def check_navigation
-    touch @map_button
+    tap @map_button
+    sleep 3
     screenshot 'Open maps'
   end
 

@@ -1,17 +1,17 @@
 class LoginPage < Calabash::Page
   def trait
     if android?
-      @sign_in_button = {marked:'Sign in'}
+      @sign_in_button = {marked: 'Sign in'}
     elsif ios?
       @sign_in_button = {marked: 'Sign in'}
-
     end
 
-    unless query(@sign_in_button).nil?
-      @present = true
+    sleep 10
+    @present = query(@sign_in_button).length != 0
+
+    if @present
       return @sign_in_button
     else
-      @present = false
       return "*"
     end
   end

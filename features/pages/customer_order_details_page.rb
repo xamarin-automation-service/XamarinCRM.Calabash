@@ -20,12 +20,12 @@ class CustomerOrderDetailsPage < Calabash::Page
   end
 
   def change_product
-    touch @product_field
+    tap @product_field
     return self
   end
 
   def change_price amount
-    touch @price_field
+    tap @price_field
     clear_text
     enter_text "$ #{amount}"
     return self
@@ -37,15 +37,15 @@ class CustomerOrderDetailsPage < Calabash::Page
   end
 
   def save_and_exit
-    touch @save_button
+    tap @save_button
     screenshot 'Dialog Appears'
-    touch @save_button
+    tap @save_button
   end
 
   def deliver_order
-    touch @deliver_order_button
+    tap @deliver_order_button
     screenshot 'Dialog Appears'
-    touch @confirm_delivery_button
+    tap @confirm_delivery_button
   end
 
 end

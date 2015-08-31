@@ -14,7 +14,7 @@ class ABSFilamentPage < Calabash::Page
     if query(color_chosen).nil?
       scroll('*', :down)
     end
-    touch color_chosen
+    tap color_chosen
   end
 end
 

@@ -8,11 +8,12 @@ class SplashScreenPage < Calabash::Page
     end
 
     sleep 10
-    unless query(@sign_in_button).nil?
-      @present = true
+
+    @present = query(@sign_in_button).length != 0
+
+    if @present
       return @sign_in_button
     else
-      @present = false
       return "*"
     end
   end

@@ -20,20 +20,20 @@ class GlobalPage < Calabash::Page
     if android?
       press_back_button
     elsif ios?
-      touch @back_button
+      tap @back_button
     end
   end
 
   def navigate_to_sales
-    touch @sales_tab
+    tap @sales_tab
   end
 
   def navigate_to_customers
-    touch @customers_tab
+    tap @customers_tab
   end
 
   def navigate_to_products
-    touch @products_tab
+    tap @products_tab
   end
 
 end
